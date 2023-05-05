@@ -1,0 +1,15 @@
+replicaCount: 2
+
+image:
+  reposiory: hcwxd/blue-whale
+
+service:
+  type: NodePort
+  port: 80
+
+ingress:
+  enabled: true
+
+  hosts:
+    - host: blue.demo.com
+      paths: [/]
