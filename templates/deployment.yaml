@@ -1,39 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blue-nginx
+  name: lucky-draw-client
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: blue-nginx
+        app: client
     spec:
       containers:
-        - name: nginx
-          image: hcwxd/blue-whale
+        - name: client
+          image: louistsaicsie/stylish-lucky-draw-client
           ports:
             - containerPort: 3000
   selector:
     matchLabels:
-      app: blue-nginx
+      app: client
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: purple-nginx
+  name: lucky-draw-server
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: purple-nginx
+        app: server
     spec:
       containers:
-        - name: nginx
-          image: hcwxd/purple-whale
+        - name: server
+          image:  louistsaicsie/stylish-lucky-draw-server
           ports:
-            - containerPort: 3000
+            - containerPort: 5000
   selector:
     matchLabels:
-      app: purple-nginx
+      app: server
