@@ -8,6 +8,6 @@ entries:
     digest: d8e5b6747b3b61d960dee8f6de77b4c2e1ae992ca52d4d1bd569242821e9d4cf
     name: chart-test
     urls:
-    - https://louistsai-csie.github.io/chart-test/doc/chart-test-1.0.0.tgz
+    - https://louistsai-csie.github.io/chart-test/chart-test-1.0.0.tgz
     version: 1.0.0
 generated: "2023-05-08T21:00:38.02178308+08:00"
